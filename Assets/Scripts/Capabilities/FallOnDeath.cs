@@ -4,6 +4,7 @@ namespace BHSCamp
 {
     public class FallOnDeath : MonoBehaviour
     {
+        [SerializeField] private LayerMask _ignoreOnDeath;
         private Ground _ground;
         private Animator _animator;
         private Health _health;
@@ -44,7 +45,7 @@ namespace BHSCamp
             _body.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
             //включаем интерполяцию чтобы объект падал максимально плавно
             _body.interpolation = RigidbodyInterpolation2D.Interpolate;
-            _body.excludeLayers = LayerMask.GetMask("Player");
+            _body.excludeLayers = _ignoreOnDeath;
         }
 
         private void ResetRigidBody()

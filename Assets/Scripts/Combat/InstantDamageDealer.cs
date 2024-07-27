@@ -20,6 +20,11 @@ namespace BHSCamp
             DealInstantDamage(collider.GetComponent<IDamageable>());
         }
 
+        public void SetDamage(int damage)
+        {
+            _instantDamage = damage;
+        }
+
         private void DealInstantDamage(IDamageable damageable)
         {
             // если объект, с которым произошла коллизия, не имеет компонент IDamageable,

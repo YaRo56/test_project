@@ -14,7 +14,7 @@ namespace BHSCamp
         public virtual void BeginAttack()
         {
             IsAttacking = true;
-            Invoke(nameof(EndAttack), GetAttackAnimationDuration());
+            Invoke(nameof(EndAttack), GetAttackCD());
         }
 
         public virtual void EndAttack()
@@ -22,13 +22,11 @@ namespace BHSCamp
             IsAttacking = false;
         }
 
-        public float GetAttackAnimationDuration()
-        {
-            return _attackAnimationClip.length;
-        }
-
         public float GetAttackCD()
         {
+            if (_attackAnimationClip)
+                return _attackAnimationClip.length + _attackCD;
+            
             return _attackCD;
         }
 

@@ -8,7 +8,7 @@ namespace BHSCamp
         private float _horizontal;
         private IMove _movable;
         private Jump _jump;
-        private AttackBase _attack;
+        private PlayerAttack _attack;
         private Health _health;
         private PlayerAnimation _animation;
         private Ground _ground;
@@ -29,7 +29,7 @@ namespace BHSCamp
             _movable = GetComponent<IMove>();
             _jump = GetComponent<Jump>();
             _animation = GetComponent<PlayerAnimation>();
-            _attack = GetComponent<AttackBase>();
+            _attack = GetComponent<PlayerAttack>();
             _ground = GetComponent<Ground>();
             _health = GetComponent<Health>();
         }
@@ -40,12 +40,13 @@ namespace BHSCamp
 
             _horizontal = Input.GetAxisRaw("Horizontal");
 
-            _horizontal = _attack.IsAttacking && _ground.OnGround? 0 : _horizontal;
             _movable.SetVelocity(new Vector2(_horizontal, 0), _speed);
             _animation.SetInputX(_horizontal);
-
+            
             if (Input.GetButtonDown("Attack"))
+            {
                 _attack.BeginAttack();
+            }
 
             if (Input.GetButtonDown("Jump"))
                 _jump.Action();

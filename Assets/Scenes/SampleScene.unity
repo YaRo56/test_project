@@ -188,7 +188,7 @@ Transform:
   m_GameObject: {fileID: 833174}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: -10}
+  m_LocalPosition: {x: 0, y: 1.344, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -209,7 +209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2689930360432033704, guid: 6702e4f69205e864bb45092cc9ec6e33, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.156
       objectReference: {fileID: 0}
     - target: {fileID: 2689930360432033704, guid: 6702e4f69205e864bb45092cc9ec6e33, type: 3}
       propertyPath: m_LocalPosition.z
@@ -247,6 +247,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7235573487984934540, guid: 6702e4f69205e864bb45092cc9ec6e33, type: 3}
+      propertyPath: _projectileParent
+      value: 
+      objectReference: {fileID: 1038019984}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -800,7 +804,7 @@ GameObject:
   - component: {fileID: 398411178}
   - component: {fileID: 398411177}
   - component: {fileID: 398411176}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shipi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1179,7 +1183,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: -10}
+  m_LocalPosition: {x: 0, y: 1.344, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1478,7 +1482,7 @@ Transform:
   m_GameObject: {fileID: 1038019983}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.812618, y: 3.8754838, z: 0.0029934905}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1907,6 +1911,10 @@ PrefabInstance:
     - target: {fileID: 7663737560827476375, guid: 9cbe946747ad1ca49856ae15e568ccd1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8383099696394366802, guid: 9cbe946747ad1ca49856ae15e568ccd1, type: 3}
+      propertyPath: _ignoreOnDeath.m_Bits
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
